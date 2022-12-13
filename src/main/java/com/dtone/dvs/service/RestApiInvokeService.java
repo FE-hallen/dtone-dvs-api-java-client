@@ -35,7 +35,7 @@ public class RestApiInvokeService {
 		provider.setCredentials(AuthScope.ANY, new UsernamePasswordCredentials(this.getApiKey(), this.getApiSecret()));
 		final HttpClientBuilder httpClientBuilder = HttpClientBuilder.create();
 		httpClientBuilder.setDefaultCredentialsProvider(provider);
-		httpClient = httpClientBuilder.build();
+		httpClient = httpClientBuilder.useSystemProperties().build();
 	}
 
 	public RestApiInvokeService(String apiKey, String apiSecret, HttpClient httpClient) {
