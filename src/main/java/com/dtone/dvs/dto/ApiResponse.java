@@ -115,7 +115,7 @@ public class ApiResponse<T> {
 				+ ", recordsPerPage=" + recordsPerPage + ", nextPage=" + nextPage + ", previousPage=" + previousPage
 				+ "]";
 	}
-	
+
 	/**
 	 * Get page information
 	 * 
@@ -124,6 +124,5 @@ public class ApiResponse<T> {
 	public PageInfo getPageInfo() {
 		return new PageInfo(totalPages, totalRecords, currentPage, recordsPerPage, nextPage, previousPage);
 	}
-
 
 }
